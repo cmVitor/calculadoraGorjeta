@@ -1,0 +1,189 @@
+body {
+    font-family: Roboto;
+    background: -webkit-linear-gradient(to left, #d4d4d4, #f5f5f5);
+    background: linear-gradient(to left, #c2c2c2, #ffffff);
+    transition: background 0.2s linear;
+}
+body.dark{
+    background: #232c35;
+}
+#container {
+    height: auto;
+    width: 360px;
+    margin: 3% auto;
+    padding: 0 0 2% 0;
+    background: #f7f7f7;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+}
+
+
+#topo {
+    background: #aaabab;
+    margin: 0;
+    padding: 0px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h1 {
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 25px 0;
+    font-size: 21px;
+    font-weight: normal;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+img {
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+p {
+    padding-left: 20px;
+}
+
+form input[type="text"] {
+    width: 90px;
+}
+
+input {
+    padding-left: 20px;
+}
+
+#total-conta {
+    font-size: 14px;
+    color: #111;
+    background-color: #f7f7f7;
+    width: 60%;
+    padding: 5px 5px 8px 8px;
+}
+
+#total-conta:focus {
+    background: #fff;
+    border: 3px solid #2980b9;
+    outline: none;
+}
+
+#taxa-servico {
+    padding: 8px 8px 10px 15px;
+    margin-left: 20px;
+    font-size: 15px;
+}
+
+#numero-pessoas {
+    width: 60%;
+    padding: 5px 5px 8px 8px;
+    margin-left: 20px;
+    color: #111;
+    background-color: #f7f7f7;
+    font-size: 14px;
+}
+
+
+button {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    background: #0ab7e2;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+}
+#limpar{
+    width: 100px;
+    height: 40px;
+    background: #62749c;
+}
+#limpar:hover{
+    background: #345497;
+}
+button:hover {
+    background: #2604a0;
+    border-bottom-color: #111;
+}
+
+button:active {
+    position: relative;
+    top: 1px;
+}
+
+#valor-calculado {
+    font-size: 30px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+#valor-calculado:before {
+    content: "Valor por pessoa:";
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    text-transform: uppercase;
+}
+
+#valor-calculado sup {
+    font-size: 20px;
+    top: -18px;
+}
+
+#valor-calculado small {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+}
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+.label{
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 18px;
+    width: 50px;
+    transform: scale(1.5);
+}
+.label .ball{
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball{
+    transform: translateX(32px);
+}
+.fa-moon{
+    color: #ffffff;
+}
+.fa-sun{
+    color: #f3f312;
+}
+.theme{
+    margin-left: 725px;
+}
+input{
+    border-radius: 15px;
+}
+select{
+    border-radius: 15px;
+}
