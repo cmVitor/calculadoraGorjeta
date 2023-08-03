@@ -2,18 +2,20 @@ body {
     font-family: Roboto;
     background: -webkit-linear-gradient(to left, #d4d4d4, #f5f5f5);
     background: linear-gradient(to left, #c2c2c2, #ffffff);
-    transition: background 0.2s linear;
+    transition: background 0.5s linear;
 }
-body.dark{
+
+body.dark {
     background: #232c35;
 }
+
 #container {
     height: auto;
     width: 360px;
     margin: 3% auto;
     padding: 0 0 2% 0;
     background: #f7f7f7;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -86,7 +88,7 @@ input {
 }
 
 
-button {
+#calcular {
     text-transform: uppercase;
     font-weight: bold;
     display: block;
@@ -99,15 +101,25 @@ button {
     color: white;
     cursor: pointer;
 }
-#limpar{
-    width: 100px;
-    height: 40px;
+
+#limpar {
+    text-transform: uppercase;
+    font-weight: bold;
+    display: block;
+    margin: 30px auto;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
     background: #62749c;
+    cursor: pointer;
+    color: #fff;
 }
-#limpar:hover{
+
+#limpar:hover {
     background: #345497;
 }
-button:hover {
+
+#calcular:hover {
     background: #2604a0;
     border-bottom-color: #111;
 }
@@ -141,11 +153,13 @@ button:active {
     font-weight: bold;
     display: block;
 }
-.checkbox{
+
+.checkbox {
     opacity: 0;
     position: absolute;
 }
-.label{
+
+.label {
     background-color: #111;
     border-radius: 50px;
     cursor: pointer;
@@ -158,7 +172,8 @@ button:active {
     width: 50px;
     transform: scale(1.5);
 }
-.label .ball{
+
+.label .ball {
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -169,21 +184,99 @@ button:active {
     transform: translateX(0px);
     transition: transform 0.2s linear;
 }
-.checkbox:checked + .label .ball{
+
+.checkbox:checked+.label .ball {
     transform: translateX(32px);
 }
-.fa-moon{
+
+.fa-moon {
     color: #ffffff;
 }
-.fa-sun{
+
+.fa-sun {
     color: #f3f312;
 }
-.theme{
-    margin-left: 725px;
+
+.theme {
+    margin: 0 47% auto;
 }
-input{
+
+input {
     border-radius: 15px;
 }
-select{
+
+select {
     border-radius: 15px;
+}
+
+.popup-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.popup-btn:hover {
+    transform: scale(1.2);
+    transition: transform 0.4s ease-in-out;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+#closePopup{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+.star-rating {
+    display: inline-block;
+    font-size: 30px;
+    margin-right: 35px;
+    cursor: pointer;
+}
+
+.avaliacao {
+    display: flex;
+}
+
+.star-icon {
+    list-style-type: none;
+    border: 1px solid #fff;
+    cursor: pointer;
+    color: #ffe500;
+    font-size: 40px;
+    /* alterar o tamanho das estrelas */
+}
+
+.star-icon::before {
+    content: "\2605";
+}
+
+.star-icon.ativo~.star-icon::before {
+    content: "\2606";
+}
+
+.avaliacao:hover .star-icon::before {
+    content: "\2605";
+}
+
+.star-icon:hover~.star-icon::before {
+    content: "\2606";
 }

@@ -15,7 +15,6 @@
             <img src="dinheiro.png">
         </div>
 
-
         <div id="calculator">
             <form>
                 <p>Quanto custou a conta?
@@ -36,7 +35,7 @@
             </form>
 
             <p>Quantas pessoas vão dividir a conta?</p>
-            <input id="numero-pessoas" type="number" placeholder="Número de pessoas"> 
+            <input id="numero-pessoas" type="number" placeholder="Número de pessoas">
 
             <button type="button" id="calcular">Calcular!</button>
             <button type="button" id="limpar">Limpar</button>
@@ -46,23 +45,47 @@
 
         <div id="valor-calculado">
             <sup>R$</sup><span id="valor-por-cabeca">0.00</span>
-            <small id="each">cada</small>            
+            <small id="each">cada</small>
         </div>
     </div>
-    <div class="theme">
-        <input type="checkbox" class="checkbox" id="chk">
-        <label class="label" for="chk">
-            <i class="fas fa-moon"></i>
-            <i class="fas fa-sun"></i>
-            <div class="ball">
-                
+    <div class="footer">
+        <div class="theme">
+            <input type="checkbox" class="checkbox" id="chk">
+            <label class="label" for="chk">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball">
+
+                </div>
+            </label>
+        </div>
+        <div class="rating">
+            <button class="popup-btn" id="openPopup">
+                <img src="star.png" alt="">
+            </button>
+
+            <div class="popup-container" id="popupContainer">
+                <div class="popup-content">
+                    <h2>Avalie-nos!</h2>
+                    <div class="star-rating">
+                        <ul class="avaliacao">
+                            <li class="star-icon ativo" data-avaliacao="1"></li>
+                            <li class="star-icon" data-avaliacao="2"></li>
+                            <li class="star-icon" data-avaliacao="3"></li>
+                            <li class="star-icon" data-avaliacao="4"></li>
+                            <li class="star-icon" data-avaliacao="5"></li>
+                        </ul>
+                    </div>
+                    <br>
+                    <button id="closePopup"><i class="fa-solid fa-x fa-beat" style="color: #808080;"></i></button>
+                </div>
             </div>
-        </label>
+
+        </div>
     </div>
-    
 
     <script type="text/javascript" src="script.js"></script>
-    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d019571a44.js" crossorigin="anonymous"></script>
 </body>
 
 
